@@ -71,13 +71,13 @@ class BlockChain {
 
 
 }
-
+let time  = `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}:${new Date().getMilliseconds()}:${new Date().getDay()}:${new Date().getDate()}:${new Date().getMonth()}:${new Date().getFullYear()}}`
 let docsChain = new BlockChain()
 
 docsChain.addBlock(
     new Block(
         1,
-        `${new Date().getDate}`,
+        `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}:${new Date().getMilliseconds()}:${new Date().getDay()}:${new Date().getDate()}:${new Date().getMonth()}:${new Date().getFullYear()}}`,
         {
             "name": "thesis.docx",
             "size": "12mb",
@@ -89,6 +89,7 @@ docsChain.addBlock(
 docsChain.addBlock(
     new Block(
         2,
+        `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}:${new Date().getMilliseconds()}:${new Date().getDay()}:${new Date().getDate()}:${new Date().getMonth()}:${new Date().getFullYear()}}`,
         new Date().getDate, 
         {
             "name": "thesis.docx", 
