@@ -30,6 +30,7 @@ class Block {
 class BlockChain {
     constructor() {
         this.chain = [this.createGenesis()]
+        this.difficulty = 4;
     }
 
     createGenesis() {
@@ -42,7 +43,8 @@ class BlockChain {
 
     addBlock(newBlock) {
         newBlock.previousHash = this.latestBlock().hash;
-        newBlock.hash = newBlock.calculateHash();
+        // newBlock.hash = newBlock.calculateHash();
+        newBlock.proofOfWork(this.difficulty)
         this.chain.push(newBlock);
     }
 
