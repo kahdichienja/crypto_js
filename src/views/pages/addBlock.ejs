@@ -1,0 +1,104 @@
+<%- include('../partial/header'); %>
+<div>
+    <%- include('../partial/navbar'); %>
+   
+    <div class="row card">
+        <form action="{% url 'profile' %}" method="POST" class="col s12">
+           
+            <h4> <%= data.data.msg %></h4>
+          
+            <div class="row">
+                <div class="col s12">
+                    <h6>1: User Details.</h6><br>
+                    <hr>
+                    <div class="row">
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">person_outline</i>
+                            <input type="text" name="" >
+                            <label for="id_lecturer_sirname">Sirname</label>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">person_outline</i>
+                            <input type="text" name="" >
+                            
+                            <label for="id_other_name">Other Names</label>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">mail</i>
+                            <input type="text" name="" >
+                            
+                            <label for="id_email">Email Address</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">dialpad</i>
+                            <input type="text" name="" >
+                            <label for="id_lecturer_sirname">Id Number</label>
+                        </div>
+                    
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">fingerprint</i>
+                            <input type="text" name="" >
+                            <label for="id_lecturer_sirname">KRA PIN</label>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">dialpad</i>
+                            <input type="text" name="" >
+                            <label for="id_lecturer_sirname">Huduma Number</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h6>2: Accademic Details.</h6><br>
+                    <hr>
+                    <div class="row">
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">location_city</i>
+                            <input type="text" name="" >
+                            
+                            <label for="id_address">University</label>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">perm_contact_calendar</i>
+                            <input type="text" name="" class="datepicker" >
+                            
+                            <label for="id_tel">Date Of graduation</label>
+                        </div>
+                        <div class="input-field col s12 l4">
+                            <i class="material-icons prefix">receipt</i>
+                            <input type="text" name="" >
+                            <label for="id_user_id_or_pe_nember">Course</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h6>3: Accademic Paper Upload.</h6><br>
+                    <hr>
+                    <div class="row p3">
+                        <div class="file-field input-field col s12 l4">
+                            <div class="btn" style="padding: 20px;">
+                               <span style="margin-left: -50px;">
+                                  <i class="material-icons prefix black-text">attachment</i>
+                               </span>
+                              <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text">
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row col s12 center">
+                <input type="submit" value="add" class="btn right" name="submit">
+            </div>
+        </form>
+    </div>
+
+</div>
+<%- include('../partial/footer'); %>

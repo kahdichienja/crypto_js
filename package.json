@@ -1,17 +1,61 @@
 {
-  "name": "blockchaintest",
+  "name": "accademicverificationwithblockchain",
   "version": "1.0.0",
   "description": "\"block chain test\"",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "blockchain": "node index.js",
+    "dev": "NODE_ENV=development nodemon -w src --exec \"babel-node src --presets es2015\"",
+    "build": "babel src -s -D -d dist --presets es2015",
+    "start": "NODE_ENV=production pm2 start dist",
+    "prestart": "npm run -s build",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend && npm start",
+    "fullstack": "concurrently -n 'REST API Server, FrontEnd' -c 'blue,green' \"npm run dev\" \"npm run frontend\""
   },
   "keywords": [
     "blockchain"
   ],
   "author": "@kchienja",
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
   "license": "MIT",
   "dependencies": {
-    "crypto-js": "^4.0.0"
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.20",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^6.8.0",
+    "nodemon": "^1.19.4"
   }
 }

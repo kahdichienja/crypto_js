@@ -1,0 +1,28 @@
+<div class="fixed-action-btn">
+    <a href="/add_block_doc" class="btn-floating btn-large red waves-effect waves-light modal-trigger">
+        <i class="large material-icons">mode_edit</i>
+    </a>
+</div>
+<script type="text/javascript" src="../static/dashboard/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.sidenav').sidenav();
+        $('.modal').modal();
+        $('.fixed-action-btn').floatingActionButton();
+        $('.dropdown-trigger').dropdown();
+        $('.materialboxed').materialbox();
+        $('.collapsible').collapsible();
+        $('.carousel').carousel();
+        $('.chips').chips();
+        $('select').formSelect();
+        $('.datepicker').datepicker({
+            maxDate: new Date(),
+        });
+    });
+
+</script>
+
+
+</body>
+
+</html>
