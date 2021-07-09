@@ -88,18 +88,13 @@ docsChain.addBlock(
 )
 docsChain.addBlock(
     new Block(
-        2,
+        1,
         `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}:${new Date().getMilliseconds()}:${new Date().getDay()}:${new Date().getDate()}:${new Date().getMonth()}:${new Date().getFullYear()}}`,
-        new Date().getDate, 
         {
-            "name": "thesis.docx", 
-            "size": "12mb", 
-            "owner": "John Doe", 
-            "institution": "Maseno University",
-            "huduma":{
-                "pro": "ystdfgsk;fd"
-            } 
-
+            "name": "thesis.docx",
+            "size": "12mb",
+            "owner": "agoo clinton",
+            "institution": "Rongo University"
         },
     ),
 )

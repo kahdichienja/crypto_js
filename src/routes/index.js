@@ -16,7 +16,7 @@ initializeDb(db => {
     // api routes v1 (/v1) { restaurant }
     router.use('/restaurant', restaurant({ config, db }))
     router.use('/test', test({ config, db}))
-
+    
     // api routes v1 (/v1) { user }
     router.use('/user', user({ config, db }))
 })

@@ -25,6 +25,7 @@ app.use(bodyParser.json({
 app.use('/v1', routes)
 
 app.get('/', async (req, res) => res.render('../views/index'));
+app.get('/verify', async (req, res) => res.render('../views/pages/verifyDoc'));
 
 app.get('/add_block_doc', async (req, res) => {
     let data1 = []
@@ -32,7 +33,6 @@ app.get('/add_block_doc', async (req, res) => {
     let data = await axios('http://127.0.0.1:8080/v1/test/')
     .then((res)=> data1 = res.data)
     .catch((err)=> err.data)
-
     res.render('../views/pages/addBlock', {
         data: data1
     });
